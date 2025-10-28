@@ -1,0 +1,155 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2025-09-23 14:44:55.195360",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "customer_details_section",
+  "first_name",
+  "last_name",
+  "full_name",
+  "gender",
+  "column_break_zona",
+  "date_of_birth",
+  "phone_number",
+  "country",
+  "column_break_aqdd",
+  "state",
+  "city",
+  "email_address",
+  "section_break_gqzl",
+  "address"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_list_view": 1,
+   "label": "Full Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther"
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date of Birth"
+  },
+  {
+   "fieldname": "email_address",
+   "fieldtype": "Data",
+   "label": "Email Address"
+  },
+  {
+   "fieldname": "phone_number",
+   "fieldtype": "Phone",
+   "label": "Phone Number"
+  },
+  {
+   "bold": 1,
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "State",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "customer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Customer Details"
+  },
+  {
+   "fieldname": "column_break_zona",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_aqdd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "label": "First Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "label": "Last Name",
+   "reqd": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "set_only_once": 1,
+   "sort_options": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "city",
+   "fieldtype": "Select",
+   "label": "City",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "section_break_gqzl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "max_height": "50px"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "group": "Booking payment success count",
+   "link_doctype": "Booking",
+   "link_fieldname": "Customer"
+  },
+  {
+   "group": "Booking payment success count",
+   "link_doctype": "Payment",
+   "link_fieldname": "Customer"
+  }
+ ],
+ "modified": "2025-10-25 14:05:08.580407",
+ "modified_by": "Administrator",
+ "module": "GoFly Journeys",
+ "name": "Customer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "first_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

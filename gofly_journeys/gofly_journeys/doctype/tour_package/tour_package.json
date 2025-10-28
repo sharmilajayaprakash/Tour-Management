@@ -1,0 +1,326 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "PKG-.###",
+ "creation": "2025-09-23 14:35:39.618397",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "package_tab",
+  "status_section",
+  "package_status",
+  "column_break_keau",
+  "column_break_qkfk",
+  "column_break_jnmb",
+  "days_left",
+  "tour_package",
+  "package_column",
+  "package_name",
+  "package_code",
+  "package_duration_column",
+  "start_date",
+  "end_date",
+  "column_break_zbeq",
+  "country",
+  "state",
+  "duration_trip_column",
+  "days",
+  "nights",
+  "visit_place_tab",
+  "section_break_qcja",
+  "expected_trip_month",
+  "column_break_wijj",
+  "column_break_bcfq",
+  "column_break_yrwr",
+  "up_to",
+  "visit_place",
+  "explore",
+  "tourist_place_tab",
+  "section_break_fcim",
+  "images",
+  "image_slider",
+  "section_break_qpre",
+  "column_break_zfgx",
+  "column_break_fzoa",
+  "column_break_xdgx",
+  "amount",
+  "section_break_zkkq",
+  "column_break_igbd",
+  "book_now"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "fieldname": "package_name",
+   "fieldtype": "Data",
+   "label": "Package Name",
+   "placeholder": "Enter The Name"
+  },
+  {
+   "bold": 1,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "placeholder": "Fixed Amount"
+  },
+  {
+   "fieldname": "tour_package",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "visit_place",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Visit Place"
+  },
+  {
+   "bold": 1,
+   "fieldname": "country",
+   "fieldtype": "Link",
+   "label": "Country",
+   "options": "Country",
+   "placeholder": "Select Country",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "explore",
+   "fieldtype": "Table",
+   "label": "Explore",
+   "options": "Explore"
+  },
+  {
+   "fieldname": "package_duration_column",
+   "fieldtype": "Column Break",
+   "label": "Package Duration"
+  },
+  {
+   "bold": 1,
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "placeholder": "Start Date"
+  },
+  {
+   "bold": 1,
+   "depends_on": "start_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "mandatory_depends_on": "start_date",
+   "placeholder": "End Date"
+  },
+  {
+   "fieldname": "package_column",
+   "fieldtype": "Column Break",
+   "label": "Tour package"
+  },
+  {
+   "bold": 1,
+   "fieldname": "package_code",
+   "fieldtype": "Data",
+   "label": "Package Code",
+   "placeholder": "Enter The Package Code",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "duration_trip_column",
+   "fieldtype": "Column Break",
+   "label": "Duration Trip"
+  },
+  {
+   "bold": 1,
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "label": "Days"
+  },
+  {
+   "bold": 1,
+   "fieldname": "nights",
+   "fieldtype": "Int",
+   "label": "Nights"
+  },
+  {
+   "fieldname": "section_break_qcja",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "section_break_qpre",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "column_break_zfgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_fzoa",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_xdgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "book_now",
+   "fieldtype": "Button",
+   "label": "Book Now"
+  },
+  {
+   "fieldname": "column_break_zbeq",
+   "fieldtype": "Column Break",
+   "label": "Location"
+  },
+  {
+   "bold": 1,
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "State",
+   "placeholder": "Select State or Provinces",
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "status_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "package_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Package Status",
+   "options": "Available\nClosed",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "days_left",
+   "fieldtype": "Data",
+   "is_virtual": 1,
+   "label": "Days Left"
+  },
+  {
+   "fieldname": "column_break_keau",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_qkfk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_jnmb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "package_tab",
+   "fieldtype": "Tab Break",
+   "label": "Package"
+  },
+  {
+   "fieldname": "visit_place_tab",
+   "fieldtype": "Tab Break",
+   "label": "Visit Place"
+  },
+  {
+   "bold": 1,
+   "fieldname": "expected_trip_month",
+   "fieldtype": "Select",
+   "label": "Expected Trip Month",
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "bold": 1,
+   "fieldname": "up_to",
+   "fieldtype": "Select",
+   "label": "Up to",
+   "options": "\nJanuary\nFebruary\nMarch\nApril\nMay\nJune\nJuly\nAugust\nSeptember\nOctober\nNovember\nDecember"
+  },
+  {
+   "fieldname": "column_break_yrwr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wijj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_bcfq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tourist_place_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tourist Place"
+  },
+  {
+   "fieldname": "images",
+   "fieldtype": "Table",
+   "label": "Images",
+   "options": "Tour Package Image",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image_slider",
+   "fieldtype": "HTML",
+   "label": "Image Slider"
+  },
+  {
+   "fieldname": "section_break_zkkq",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "column_break_igbd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_fcim",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "make_attachments_public": 1,
+ "max_attachments": 7,
+ "modified": "2025-10-27 13:32:39.820973",
+ "modified_by": "Administrator",
+ "module": "GoFly Journeys",
+ "name": "Tour Package",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Pink",
+   "title": "Available"
+  },
+  {
+   "color": "Red",
+   "title": "Closed"
+  }
+ ],
+ "title_field": "package_name"
+}

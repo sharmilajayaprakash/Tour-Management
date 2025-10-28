@@ -1,0 +1,297 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "Book NO-.###",
+ "creation": "2025-09-26 15:16:57.917701",
+ "doctype": "DocType",
+ "email_append_to": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "package_details_section",
+  "tour_package",
+  "tour_package_name",
+  "column_break_xhqi",
+  "start_date",
+  "end_date",
+  "column_break_wuru",
+  "package_status",
+  "amount",
+  "section_break_tyrz",
+  "customer",
+  "booking_date",
+  "travel_date",
+  "column_break_choi",
+  "return_date",
+  "booking_status",
+  "sender_email",
+  "column_break_bylr",
+  "package_country",
+  "package_state",
+  "visa_tab",
+  "visa_section",
+  "booking_members",
+  "total_visa_fee",
+  "terms_and_conditions_tab",
+  "notes_section",
+  "terms_and_conditions",
+  "amended_from",
+  "section_break_seuh",
+  "accept_tnc",
+  "column_break_jikd",
+  "make_payment"
+ ],
+ "fields": [
+  {
+   "bold": 1,
+   "depends_on": "eval:doc.booking_status===\"Booked\"",
+   "fieldname": "booking_date",
+   "fieldtype": "Date",
+   "is_virtual": 1,
+   "label": "Booking Date",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer"
+  },
+  {
+   "bold": 1,
+   "fieldname": "tour_package",
+   "fieldtype": "Link",
+   "label": "Tour Package",
+   "options": "Tour Package"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "tour_package.amount",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "bold": 1,
+   "fieldname": "booking_status",
+   "fieldtype": "Select",
+   "label": "Booking Status",
+   "options": "Draft\nBooked\nConfirmed\nCompleted\nCancelled",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_choi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "package_details_section",
+   "fieldtype": "Section Break",
+   "label": "Package Details"
+  },
+  {
+   "fieldname": "section_break_tyrz",
+   "fieldtype": "Section Break",
+   "label": "Booking Section"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "tour_package.package_name",
+   "fieldname": "tour_package_name",
+   "fieldtype": "Data",
+   "label": "Tour Package Name",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "tour_package.start_date",
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "tour_package.end_date",
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "tour_package.package_status",
+   "fieldname": "package_status",
+   "fieldtype": "Data",
+   "label": "Package Status",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xhqi",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_wuru",
+   "fieldtype": "Column Break"
+  },
+  {
+   "bold": 1,
+   "fieldname": "travel_date",
+   "fieldtype": "Date",
+   "label": "Travel Date"
+  },
+  {
+   "fieldname": "notes_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "terms_and_conditions",
+   "fieldtype": "HTML",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "visa_tab",
+   "fieldtype": "Tab Break",
+   "label": "Visa"
+  },
+  {
+   "fieldname": "visa_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Booking Members"
+  },
+  {
+   "fieldname": "terms_and_conditions_tab",
+   "fieldtype": "Tab Break",
+   "label": "Terms and Conditions"
+  },
+  {
+   "fieldname": "make_payment",
+   "fieldtype": "HTML",
+   "label": "Make Payment"
+  },
+  {
+   "bold": 1,
+   "fieldname": "return_date",
+   "fieldtype": "Date",
+   "label": "Return Date"
+  },
+  {
+   "fetch_from": "customer.email_address",
+   "fieldname": "sender_email",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Sender Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Booking",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "accept_tnc",
+   "fieldtype": "Check",
+   "label": "I accept Terms & Conditions"
+  },
+  {
+   "fieldname": "section_break_seuh",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "column_break_jikd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "booking_members",
+   "fieldtype": "Table",
+   "label": "Booking Members",
+   "options": "Booking Member"
+  },
+  {
+   "bold": 1,
+   "fieldname": "total_visa_fee",
+   "fieldtype": "Int",
+   "label": "Total Visa Amount",
+   "read_only": 1
+  },
+  {
+   "bold": 1,
+   "fetch_from": "tour_package.country",
+   "fieldname": "package_country",
+   "fieldtype": "Data",
+   "label": "Country",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "tour_package.state",
+   "fieldname": "package_state",
+   "fieldtype": "Data",
+   "label": "State"
+  },
+  {
+   "fieldname": "column_break_bylr",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2025-10-27 15:52:45.634195",
+ "modified_by": "Administrator",
+ "module": "GoFly Journeys",
+ "name": "Booking",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sender_field": "sender_email",
+ "sender_name_field": "customer",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Gray",
+   "title": "Draft"
+  },
+  {
+   "color": "Orange",
+   "title": "Booked"
+  },
+  {
+   "color": "Green",
+   "title": "Confirmed"
+  },
+  {
+   "color": "Purple",
+   "title": "Completed"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  }
+ ]
+}
