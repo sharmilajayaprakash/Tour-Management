@@ -1,0 +1,29 @@
+<div class="customer-card" style="padding: 1rem; border-bottom: 1px solid #eee;">
+  <a href="{{ doc.route }}" style="text-decoration: none; color: inherit;">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h4 style="margin: 0; font-weight: 600;">
+          {{ doc.full_name or (doc.first_name + " " + doc.last_name) }}
+        </h4>
+        {% if doc.email_address %}
+          <p style="margin: 0; font-size: 0.9rem; color: #555;">📧 {{ doc.email_address }}</p>
+        {% endif %}
+        {% if doc.phone_number %}
+          <p style="margin: 0; font-size: 0.9rem; color: #555;">📞 {{ doc.phone_number }}</p>
+        {% endif %}
+        {% if doc.city or doc.state or doc.country %}
+          <p style="margin: 0; font-size: 0.9rem; color: #777;">
+            🌍 {{ doc.city }}, {{ doc.state }}, {{ doc.country }}
+          </p>
+        {% endif %}
+      </div>
+      <div>
+        {% if doc.status == "Active" %}
+          <span style="background: #d4edda; color: #155724; padding: 4px 8px; border-radius: 6px; font-size: 0.85rem;">Active</span>
+        {% else %}
+          <span style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 6px; font-size: 0.85rem;">Inactive</span>
+        {% endif %}
+      </div>
+    </div>
+  </a>
+</div>

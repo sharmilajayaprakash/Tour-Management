@@ -4,6 +4,11 @@
 frappe.ui.form.on('Customer', {
     refresh: function (frm) {
         gofly.common.add_open_related_button(frm);
+
+        // Web Link
+        if(frm.doc.web_link){
+            frm.add_web_link(frm.doc.web_link,"Visit official Website")
+        }
     },
 
 

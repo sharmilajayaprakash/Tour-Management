@@ -2,11 +2,11 @@
 # For license information, please see license.txt
 import frappe
 import requests
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 from frappe.utils import validate_email_address
 
 
-class Customer(Document):
+class Customer(WebsiteGenerator):
     def validate(self):
         # Email validation
         if self.email_address:

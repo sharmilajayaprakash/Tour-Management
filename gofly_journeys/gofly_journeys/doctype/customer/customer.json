@@ -7,6 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "customer_details_section",
+  "photo",
   "first_name",
   "last_name",
   "full_name",
@@ -19,8 +20,13 @@
   "state",
   "city",
   "email_address",
+  "status",
   "section_break_gqzl",
-  "address"
+  "address",
+  "tab_2_tab",
+  "web_view_section",
+  "route",
+  "web_link"
  ],
  "fields": [
   {
@@ -111,10 +117,42 @@
    "fieldtype": "Small Text",
    "label": "Address",
    "max_height": "50px"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nInactive"
+  },
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Web view"
+  },
+  {
+   "fieldname": "web_view_section",
+   "fieldtype": "Section Break",
+   "label": "Web View"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "fieldname": "web_link",
+   "fieldtype": "Data",
+   "label": "Web Link"
+  },
+  {
+   "fieldname": "photo",
+   "fieldtype": "Attach Image",
+   "label": "Photo"
   }
  ],
  "grid_page_length": 50,
- "index_web_pages_for_search": 1,
+ "has_web_view": 1,
+ "image_field": "photo",
  "links": [
   {
    "group": "Booking payment success count",
@@ -127,7 +165,7 @@
    "link_fieldname": "Customer"
   }
  ],
- "modified": "2025-10-25 14:05:08.580407",
+ "modified": "2025-11-04 18:17:32.237296",
  "modified_by": "Administrator",
  "module": "GoFly Journeys",
  "name": "Customer",
@@ -147,9 +185,19 @@
    "write": 1
   }
  ],
+ "route": "customer",
  "row_format": "Dynamic",
  "search_fields": "first_name",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Green",
+   "title": "Active"
+  },
+  {
+   "color": "Red",
+   "title": "Inactive"
+  }
+ ]
 }

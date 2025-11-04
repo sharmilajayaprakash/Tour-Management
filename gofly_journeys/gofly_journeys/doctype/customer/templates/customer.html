@@ -1,0 +1,50 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="customer-profile" style="max-width: 700px; margin: auto; padding: 2rem;">
+  <h1 style="font-weight: 600; margin-bottom: 0.5rem;">
+    {{ doc.full_name or (doc.first_name + " " + doc.last_name) }}
+  </h1>
+
+  {% if doc.status %}
+    <p style="font-size: 0.9rem;">
+      {% if doc.status == "Active" %}
+        <span style="background: #d4edda; color: #155724; padding: 4px 8px; border-radius: 6px;">Active</span>
+      {% else %}
+        <span style="background: #f8d7da; color: #721c24; padding: 4px 8px; border-radius: 6px;">Inactive</span>
+      {% endif %}
+    </p>
+  {% endif %}
+
+  <div style="margin-top: 1.5rem;">
+    {% if doc.email_address %}
+      <p><strong>Email:</strong> {{ doc.email_address }}</p>
+    {% endif %}
+    {% if doc.phone_number %}
+      <p><strong>Phone:</strong> {{ doc.phone_number }}</p>
+    {% endif %}
+    {% if doc.gender %}
+      <p><strong>Gender:</strong> {{ doc.gender }}</p>
+    {% endif %}
+    {% if doc.date_of_birth %}
+      <p><strong>Date of Birth:</strong> {{ frappe.format_date(doc.date_of_birth, "long") }}</p>
+    {% endif %}
+    {% if doc.address %}
+      <p><strong>Address:</strong> {{ doc.address }}</p>
+    {% endif %}
+    {% if doc.city or doc.state or doc.country %}
+      <p><strong>Location:</strong>
+        {{ doc.city }}
+        {% if doc.state %}, {{ doc.state }}{% endif %}
+        {% if doc.country %}, {{ doc.country }}{% endif %}
+      </p>
+    {% endif %}
+  </div>
+
+  <hr style="margin: 2rem 0;">
+
+  <p style="color: #888; font-size: 0.9rem;">
+    Last updated on {{ frappe.format_date(doc.modified, "long") }}
+  </p>
+</div>
+{% endblock %}

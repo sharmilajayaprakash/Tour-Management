@@ -1,5 +1,7 @@
 {
  "aggregate_function_based_on": "",
+ "background_color": "#FDC360",
+ "color": "#FFFFFF",
  "creation": "2025-10-27 19:25:58.745578",
  "currency": "INR",
  "docstatus": 0,
@@ -12,7 +14,7 @@
  "is_public": 0,
  "is_standard": 1,
  "label": "Booking Completed",
- "modified": "2025-10-27 19:25:58.745578",
+ "modified": "2025-11-04 19:23:00.686950",
  "modified_by": "Administrator",
  "module": "GoFly Journeys",
  "name": "Booking Completed",

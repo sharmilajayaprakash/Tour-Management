@@ -251,5 +251,10 @@ app_include_js = [
     ]
 
 app_include_css = [
-    "/assets/gofly_journeys/css/one.css"
+    "/assets/gofly_journeys/css/one.css",
+    "/assets/gofly_journeys/css/two.css",
     ]
+
+fixtures=[
+    "Customer"
+]
