@@ -1,0 +1,42 @@
+{
+ "cards": [
+  {
+   "card": "Booking"
+  },
+  {
+   "card": "Payment Pending"
+  },
+  {
+   "card": "Booking Completed"
+  },
+  {
+   "card": "Payment Success"
+  }
+ ],
+ "charts": [
+  {
+   "chart": "Available Hotels",
+   "width": "Half"
+  },
+  {
+   "chart": "Booking Records",
+   "width": "Half"
+  },
+  {
+   "chart": "",
+   "width": "Half"
+  }
+ ],
+ "creation": "2025-11-05 15:50:51.720710",
+ "dashboard_name": "Tour Management",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2025-11-05 15:53:19.998212",
+ "modified_by": "Administrator",
+ "module": "GoFly Journeys",
+ "name": "Tour Management",
+ "owner": "Administrator"
+}

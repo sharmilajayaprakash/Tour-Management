@@ -93,6 +93,5 @@ def get_guide_query(doctype, txt, searchfield, start, page_len, filters):
         order_by="name"
     )
 
-    # Return list of lists for search_link
     return [[g.name, g.full_name] for g in guides]
 

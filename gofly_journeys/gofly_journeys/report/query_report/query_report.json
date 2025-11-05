@@ -1,0 +1,39 @@
+{
+ "add_total_row": 0,
+ "add_translate_data": 0,
+ "columns": [],
+ "creation": "2025-11-05 12:35:34.224134",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "My Letter Head",
+ "letterhead": null,
+ "modified": "2025-11-05 12:35:34.224134",
+ "modified_by": "Administrator",
+ "module": "GoFly Journeys",
+ "name": "Query Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT\r\n    p.payment_id AS \"Payment ID:Link/Payment:120\",\r\n    p.customer AS \"Customer:Link/Customer:150\",\r\n    p.booking AS \"Booking:Link/Booking:150\",\r\n    p.amount AS \"Package Amount:Currency:120\",\r\n    p.visa_amount AS \"Visa Amount:Currency:120\",\r\n    p.total_amount AS \"Total Amount:Currency:120\",\r\n    p.advance_amount AS \"Advance Amount:Currency:120\",\r\n    p.balance_amount AS \"Balance Amount:Currency:120\",\r\n    p.payment_status AS \"Payment Status:Data:120\",\r\n    p.payment_count AS \"Payment Count:Int:100\",\r\n    p.modified AS \"Last Updated:Datetime:150\"\r\nFROM\r\n    `tabPayment` p\r\nORDER BY\r\n    p.modified DESC;\r\n",
+ "ref_doctype": "Payment",
+ "report_name": "Query Report",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Payment"
+  },
+  {
+   "role": "Customer"
+  },
+  {
+   "role": "Staff"
+  }
+ ],
+ "timeout": 0
+}

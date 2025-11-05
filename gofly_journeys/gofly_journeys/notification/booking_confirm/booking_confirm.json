@@ -1,5 +1,5 @@
 {
- "attach_print": 0,
+ "attach_print": 1,
  "channel": "Email",
  "condition": "doc.booking_status == \"Booked\"",
  "creation": "2025-10-28 19:08:04.475367",
@@ -13,12 +13,12 @@
  "is_standard": 1,
  "message": "<p>Add your message here</p>\n",
  "message_type": "HTML",
- "modified": "2025-10-28 19:50:49.114357",
+ "modified": "2025-11-05 19:28:30.983127",
  "modified_by": "Administrator",
  "module": "GoFly Journeys",
  "name": "Booking Confirm",
  "owner": "Administrator",
- "print_format": "Booking 1",
+ "print_format": "My Printformat",
  "recipients": [
   {
    "receiver_by_document_field": "sender_email",
@@ -26,7 +26,7 @@
   }
  ],
  "send_system_notification": 1,
- "send_to_all_assignees": 0,
+ "send_to_all_assignees": 1,
  "sender": "Sharmila",
  "sender_email": "sharmilajayaprakash2001@gmail.com",
  "subject": "{{doc.customer}} Successfully Booked",
